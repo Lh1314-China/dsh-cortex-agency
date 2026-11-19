@@ -1,0 +1,16 @@
+# dsh-cortex-agency bundle patch
+#
+# 伴生插件：装在 dsh-cortex 旁边，但不替它说话。
+# 默认关闭（enabled: false）；打开后由宿主心跳驱动，只在空闲时跑，
+# 只写自己的 scope，永远不发消息、不碰用户记忆。
+- insert:
+    - id: cortex-agency
+      name: 'dsh-cortex-agency'
+      config:
+        enabled: false
+        scope: agency
+        idleMinutes: 30
+        maxThoughtsPerDay: 12
+        minGapMinutes: 60
+        globalGapMinutes: 25
+        maxTokens: 220

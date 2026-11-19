@@ -1,0 +1,64 @@
+{
+  "name": "dsh-cortex-agency",
+  "version": "0.1.7",
+  "description": "Memory companion for dsh-cortex: drive pool, idle rumination and metacognition that run on the host scheduler, off by default, and write only into their own scope. 记忆内核的伴生层：驱力、空闲沉思、元认知，默认关闭，独立分区。",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "src",
+    "bin",
+    "cordis.patch.yml",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "check": "node --check index.js",
+    "test:unit": "node --test test/unit/*.test.js"
+  },
+  "engines": {
+    "node": ">=24",
+    "dsh": ">=0.2.1-rc.2 <0.5.0"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "compatibility": {
+      "dsh": ">=0.2.1-rc.2 <0.5.0",
+      "node": ">=24",
+      "profiles": [
+        "desktop",
+        "web"
+      ]
+    }
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cortex",
+    "memory",
+    "agency",
+    "drives",
+    "rumination"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lh1314-China/dsh-cortex-agency.git"
+  },
+  "homepage": "https://github.com/Lh1314-China/dsh-cortex-agency#readme",
+  "bugs": {
+    "url": "https://github.com/Lh1314-China/dsh-cortex-agency/issues"
+  },
+  "author": {
+    "name": "Lh1314-China"
+  },
+  "license": "MIT"
+}
