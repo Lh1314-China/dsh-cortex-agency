@@ -70,3 +70,10 @@ node bin/agency.mjs thoughts --limit 10
 - 不产生主观体验；「驱力」是一组数字，「沉思」是一段文本。
 - 不联网（除非 cortex 的 LLM 适配器本身联网）。
 - 不在 `session/event` 活跃时运行。
+
+## 前提与许可
+
+- 需要先装 `dsh-cortex`：本插件通过 `cortex.onTick()` 挂到它的调度器上。
+- DSH `>=0.2.1-rc.2 <0.5.0`、Node `>=24`（见 `package.json` 的 `engines` / `dsh.compatibility`）。
+- 默认关闭（`enabled: false`）：不开启时不写任何东西、不调 LLM。
+- **MIT**，见 [LICENSE](LICENSE)。数据在 `~/.dsh/cortex-agency`，删掉该目录即彻底清除。
